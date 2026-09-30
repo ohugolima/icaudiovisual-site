@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ICA — Instituto de Criação Audiovisual</title>
+<meta name="description" content="Escola prática de criação de conteúdo e audiovisual em São Paulo. Primeiro curso: Luz, Câmera e Conteúdo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&display=swap">
+
+<meta property="og:title" content="ICA — Instituto de Criação Audiovisual">
+<meta property="og:description" content="Escola prática de criação de conteúdo e audiovisual em São Paulo. Primeiro curso: Luz, Câmera e Conteúdo.">
+<meta property="og:image" content="https://icaudiovisual.com.br/og.png">
+<meta property="og:url" content="https://icaudiovisual.com.br/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0D0D0D">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://icaudiovisual.com.br/">
+<style>
+/* Layout: a dark set, left-aligned like a slate. One lit point (the amber dot) carries the page; everything else is type on black. */
+:root{
+  --preto:#0D0D0D; --grafite:#1A1918; --fio:#2E2C28;
+  --papel:#F4F1EA; --cinza:#B9B3A6; --ambar:#E3A44B; --erro:#F08A7E;
+  --display:"Fraunces", Georgia, "Times New Roman", serif;
+  --texto:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--preto);color:var(--papel);font-family:var(--texto);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:clamp(16px,5vw,56px)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ambar);outline-offset:3px}
+.dot{color:var(--ambar)}
+.label{font-size:13px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--cinza)}
+h1,h2,h3{font-family:var(--display);font-weight:560;letter-spacing:-.01em;line-height:1.02;margin:0;text-wrap:balance}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--preto) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--fio)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px}
+.mark{font-family:var(--display);font-weight:560;font-size:30px;letter-spacing:-.01em;text-decoration:none;line-height:1}
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 15px/1 var(--texto);letter-spacing:.02em;text-decoration:none;border:1px solid var(--papel);color:var(--papel);background:transparent;padding:14px 20px;border-radius:0;cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:var(--papel);color:var(--preto)}
+.btn.solid{background:var(--papel);color:var(--preto)}
+.btn.solid:hover{background:var(--ambar);border-color:var(--ambar)}
+.btn.small{padding:10px 14px;font-size:14px}
+
+/* hero */
+.hero{padding-block:clamp(72px,12vw,150px) clamp(56px,8vw,96px)}
+.hero h1{font-size:clamp(76px,15vw,208px);line-height:.92;margin-top:28px}
+.hero .lit{display:inline-block;color:var(--ambar)}
+@media (prefers-reduced-motion:no-preference){
+  .hero .lit{animation:acende 1.6s ease-out .3s both}
+  @keyframes acende{0%{opacity:.25;text-shadow:none}55%{opacity:1;text-shadow:0 0 38px rgba(227,164,75,.55)}100%{opacity:1;text-shadow:0 0 0 rgba(227,164,75,0)}}
+}
+.hero .lead{font-size:clamp(20px,2.2vw,26px);line-height:1.45;max-width:34ch;margin:36px 0 40px;color:var(--papel)}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}
+.hero .cta span{color:var(--cinza);font-size:15px}
+
+section{border-top:1px solid var(--fio);padding-block:clamp(64px,9vw,112px)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px 48px;align-items:start}
+.sec-head h2{font-size:clamp(40px,5.5vw,72px)}
+@media (max-width:760px){.sec-head{grid-template-columns:minmax(0,1fr)}}
+
+/* curso */
+.curso-intro{font-size:20px;color:var(--cinza);max-width:52ch;margin:24px 0 0}
+.tres{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:56px;border-top:1px solid var(--fio)}
+.tres article{padding:32px 32px 8px 0;display:flex;flex-direction:column;gap:12px;min-width:0}
+.tres article+article{padding-left:32px;border-left:1px solid var(--fio)}
+.tres h3{font-size:44px}
+.tres p{margin:0;color:var(--cinza);max-width:32ch}
+@media (max-width:760px){.tres{grid-template-columns:minmax(0,1fr)}.tres article+article{padding-left:0;border-left:0;border-top:1px solid var(--fio)}}
+.ficha{display:flex;flex-wrap:wrap;gap:12px 40px;margin-top:48px;padding-top:24px;border-top:1px solid var(--fio)}
+.ficha div{display:flex;flex-direction:column;gap:6px}
+.ficha b{font-weight:500;font-size:18px}
+
+/* aula rapida */
+.decisoes{list-style:none;margin:48px 0 0;padding:0;display:grid;gap:0}
+.decisoes li{display:grid;grid-template-columns:72px minmax(0,1fr);gap:24px;padding:28px 0;border-top:1px solid var(--fio)}
+.decisoes .n{font-family:var(--display);font-size:56px;line-height:1;color:var(--ambar);font-variant-numeric:tabular-nums}
+.decisoes h3{font-size:30px;line-height:1.15;margin-bottom:8px}
+.decisoes p{margin:0;color:var(--cinza);max-width:56ch}
+
+/* professor */
+.prof{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px 48px}
+.prof h2{font-size:clamp(40px,5.5vw,72px)}
+.prof p{margin:0 0 16px;font-size:20px;max-width:52ch}
+.prof .muted{color:var(--cinza);font-size:17px}
+@media (max-width:760px){.prof{grid-template-columns:minmax(0,1fr)}}
+
+/* lista */
+.lista{background:var(--grafite)}
+.lista .sec-head p{color:var(--cinza);font-size:19px;max-width:44ch;margin:20px 0 0}
+form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:16px;align-items:end;margin-top:48px}
+@media (max-width:900px){form{grid-template-columns:minmax(0,1fr)}}
+.campo{display:flex;flex-direction:column;gap:8px;min-width:0}
+.campo label{font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--cinza)}
+.campo input{font:400 18px/1.2 var(--texto);color:var(--papel);background:var(--preto);border:1px solid var(--fio);border-radius:0;padding:14px 14px;width:100%}
+.campo input:focus{outline:none;border-color:var(--ambar)}
+.campo input[aria-invalid="true"]{border-color:var(--erro)}
+.msg{grid-column:1/-1;margin:0;font-size:16px;min-height:1.5em;color:var(--cinza)}
+.msg.erro{color:var(--erro)}
+.msg.ok{color:var(--papel)}
+
+footer{border-top:1px solid var(--fio);padding-block:48px 64px;color:var(--cinza);font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+footer .mark{font-size:44px;color:var(--papel)}
+footer .col{display:flex;flex-direction:column;gap:6px}
+</style>
+</head>
+<body>
+
+
+<header>
+  <div class="wrap">
+    <a class="mark" href="#topo" aria-label="ICA, início">ICA<span class="dot">.</span></a>
+    <a class="btn small" href="#lista">Lista de espera</a>
+  </div>
+</header>
+
+<main id="topo">
+  <div class="wrap hero">
+    <p class="label">Instituto de Criação Audiovisual · São Paulo</p>
+    <h1>Luz primeiro<span class="lit">.</span></h1>
+    <p class="lead">O ICA é uma escola prática de criação de conteúdo e audiovisual, com aulas dadas por quem grava toda semana.</p>
+    <div class="cta">
+      <a class="btn solid" href="#lista">Entrar na lista de espera</a>
+      <span>Primeiro curso: Luz, Câmera e Conteúdo</span>
+    </div>
+  </div>
+
+  <section id="curso">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">O primeiro curso</p>
+        <div>
+          <h2>Luz, Câmera e Conteúdo<span class="dot">.</span></h2>
+          <p class="curso-intro">Pra quem cria, grava pra marca ou quer começar no audiovisual e sente que o próprio vídeo podia estar muito melhor. Você aprende com o equipamento que já tem.</p>
+        </div>
+      </div>
+      <div class="tres">
+        <article><p class="label">Parte 1</p><h3>Luz</h3><p>Ler a luz do lugar e usar janela, abajur e cortina a seu favor antes de pensar em equipamento.</p></article>
+        <article><p class="label">Parte 2</p><h3>Câmera</h3><p>Enquadrar, expor e gravar com intenção, no celular ou na câmera.</p></article>
+        <article><p class="label">Parte 3</p><h3>Conteúdo</h3><p>Planejar o vídeo antes do REC e contar uma ideia com clareza até o último corte.</p></article>
+      </div>
+      <div class="ficha">
+        <div><span class="label">Formato</span><b>Em breve</b></div>
+        <div><span class="label">Início</span><b>Em breve</b></div>
+        <div><span class="label">Inscrições</span><b>Lista de espera aberta</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="aula">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">Uma amostra da aula</p>
+        <h2>Três decisões antes do REC<span class="dot">.</span></h2>
+      </div>
+      <ol class="decisoes">
+        <li><span class="n">1</span><div><h3>Pra quem é</h3><p>Quem vai assistir decide o ritmo, a linguagem e a duração. Escolhe uma pessoa e fala com ela.</p></div></li>
+        <li><span class="n">2</span><div><h3>O que a pessoa tem que lembrar</h3><p>Uma ideia por vídeo. Se você precisa de duas frases pra explicar a ideia, ainda dá pra cortar.</p></div></li>
+        <li><span class="n">3</span><div><h3>Onde está a luz</h3><p>Posiciona você em relação à janela primeiro. A câmera vem depois.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="professor">
+    <div class="wrap prof">
+      <p class="label">Quem dá a aula</p>
+      <div>
+        <h2>Hugo Lima<span class="dot">.</span></h2>
+        <p style="margin-top:24px">Diretor e ator, cofundador da Rota, produtora audiovisual de São Paulo. Atuou em campanhas para Google, Skol, TikTok e Banco do Brasil.</p>
+        <p class="muted">No ICA, ele ensina o que usa no set: decidir antes de gravar, usar a luz disponível e editar pra história andar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="lista" class="lista">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="label">Lista de espera</p>
+        <div>
+          <h2>Fica sabendo primeiro<span class="dot">.</span></h2>
+          <p>Deixa seu contato e a gente avisa quando as inscrições de Luz, Câmera e Conteúdo abrirem.</p>
+        </div>
+      </div>
+      <form id="form-lista" novalidate>
+        <div class="campo"><label for="nome">Nome</label><input id="nome" name="nome" autocomplete="name" required></div>
+        <div class="campo"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+        <div class="campo"><label for="whats">WhatsApp</label><input id="whats" name="whats" type="tel" autocomplete="tel" placeholder="(11) 90000-0000"></div>
+        <button class="btn solid" type="submit">Quero entrar</button>
+        <p class="msg" id="msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="col">
+      <span class="mark">ICA<span class="dot">.</span></span>
+      <span>Instituto de Criação Audiovisual · São Paulo, 2026</span>
+    </div>
+    <div class="col">
+      <a href="https://instagram.com/icaudiovisual" rel="noopener">@icaudiovisual</a>
+      <span class="label" style="font-size:12px">Realização: Rota</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Lista de espera: envia para o Google Forms.
+   Preencha FORM_ID e os códigos entry.* quando o formulário estiver pronto. */
+var LISTA = {
+  FORM_ID: "1FAIpQLScyVlF9xf7eu3Tk2Idn1uMiwfzq62yNmxkfu3nxR6g5AksOXg",            // ex.: 1FAIpQLSe...  (vem do link do formulário)
+  NOME: "entry.1839475390",               // ex.: entry.123456789
+  EMAIL: "entry.1609119930",              // ex.: entry.987654321
+  WHATS: "entry.1555315758"               // ex.: entry.555555555
+};
+(function(){
+  var f=document.getElementById('form-lista'), msg=document.getElementById('msg'), btn=f.querySelector('button');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var nome=f.nome, email=f.email, whats=f.whats, ok=true;
+    [nome,email].forEach(function(i){i.removeAttribute('aria-invalid')});
+    if(!nome.value.trim()){nome.setAttribute('aria-invalid','true');ok=false}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())){email.setAttribute('aria-invalid','true');ok=false}
+    if(!ok){msg.className='msg erro';msg.textContent='Preenche seu nome e um e-mail válido pra entrar na lista.';return}
+    if(!LISTA.FORM_ID){msg.className='msg';msg.textContent='A lista abre nos próximos dias. Enquanto isso, segue o @icaudiovisual no Instagram.';return}
+    var d=new URLSearchParams();
+    d.append(LISTA.NOME,nome.value.trim()); d.append(LISTA.EMAIL,email.value.trim());
+    if(LISTA.WHATS) d.append(LISTA.WHATS,whats.value.trim());
+    btn.disabled=true; msg.className='msg'; msg.textContent='Enviando…';
+    fetch('https://docs.google.com/forms/d/e/'+LISTA.FORM_ID+'/formResponse',{method:'POST',mode:'no-cors',body:d})
+      .then(function(){f.reset();msg.className='msg ok';msg.textContent='Pronto, você está na lista. A gente avisa quando as inscrições abrirem.'})
+      .catch(function(){msg.className='msg erro';msg.textContent='Não deu pra enviar agora. Confere sua conexão e tenta de novo.'})
+      .finally(function(){btn.disabled=false});
+  });
+})();
+</script>
+</body>
+</html>
